@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Deutsch B1 | 我的职场德语语法练习</title>
+  <style>
+    :root{--bg:#f5f8ff;--ink:#162540;--muted:#60728e;--line:#dae4f0;--blue:#255dcf;--shadow:0 16px 36px rgba(35,63,106,.08)}
+    *{box-sizing:border-box}body{margin:0;background:linear-gradient(150deg,#edf4ff 0%,#f7fbff 50%,#f5f9fa 100%);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);min-height:100vh}
+    .wrap{max-width:960px;margin:auto;padding:52px 24px 70px} .eyebrow{font-size:.78rem;font-weight:750;letter-spacing:.13em;text-transform:uppercase;color:var(--blue)}
+    h1{font-size:clamp(2rem,5vw,3rem);margin:14px 0 11px;letter-spacing:-.045em} .intro{font-size:1.05rem;color:var(--muted);line-height:1.85;max-width:650px;margin:0 0 32px}
+    .top{border:1px solid #e6edf7;background:rgba(255,255,255,.83);border-radius:23px;padding:36px;box-shadow:var(--shadow)}
+    .pills{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}.pill{border-radius:999px;padding:7px 12px;font-size:.83rem;font-weight:650;background:#edf3ff;color:#2854a4}
+    h2{font-size:1.4rem;margin:36px 0 16px}.sub{color:var(--muted);font-size:.93rem;margin-top:-6px;line-height:1.7}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:16px;margin-top:22px}
+    .card{display:flex;flex-direction:column;text-decoration:none;color:inherit;border:1px solid var(--line);background:white;border-radius:20px;padding:23px;min-height:185px;box-shadow:var(--shadow);transition:transform .14s,border-color .14s}
+    .card:hover,.card:focus-visible{transform:translateY(-3px);border-color:#7799e8;outline:none}
+    .num{width:max-content;padding:5px 10px;border-radius:9px;background:#eff4ff;color:#3464c5;font-weight:800;font-size:.78rem}
+    .name{font-weight:750;font-size:1.14rem;line-height:1.55;overflow-wrap:anywhere;margin:16px 0 6px}
+    .meta{font-size:.85rem;color:var(--muted);line-height:1.6;margin-top:auto}
+    .go{color:var(--blue);font-weight:730;margin-top:16px}
+    .notice{border:1px solid var(--line);background:#fff;border-radius:15px;padding:17px 20px;line-height:1.75;color:#4d617b;margin-top:18px}
+    .notice strong{color:var(--ink)}a{color:var(--blue)}.actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:26px}.actions a{text-decoration:none;font-weight:650;font-size:.93rem}
+    footer{margin-top:38px;color:#7f8ca1;font-size:.8rem}
+    @media(max-width:570px){.wrap{padding:22px 14px 44px}.top{padding:25px 20px}h2{margin-top:29px}.card{min-height:155px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="top">
+      <div class="eyebrow">Mein Deutschtraining · B1 Beruf</div>
+      <h1>我的 B1 职场德语练习册</h1>
+      <p class="intro">把语法规则记清楚，再用职场情境反复练习。选择下面的语法专题，开始学习、填空、自动批改和错题复习。</p>
+      <div class="pills"><span class="pill">语法一眼速记</span><span class="pill">职场德语 B1</span><span class="pill">互动练习</span><span class="pill">随时复习</span></div>
+    </section>
+    <h2>语法专题 <span id="count" style="font-weight:500;color:#7989a1;font-size:1rem"></span></h2>
+    <p class="sub">这个页面会自动读取你在 GitHub 仓库根目录上传的 <code>.html</code> 练习册。以后添加新练习册，不必再改首页。</p>
+    <div id="cards" class="cards" aria-live="polite"><div class="notice">正在读取练习册列表……</div></div>
+    <div id="info" class="notice" hidden></div>
+    <div class="actions">
+      <a href="https://github.com/JieDong726/Germanlearning" target="_blank" rel="noopener noreferrer">管理 GitHub 练习文件 ↗</a>
+      <a href="https://github.com/JieDong726/Germanlearning/settings/pages" target="_blank" rel="noopener noreferrer">查看 Pages 部署设置 ↗</a>
+    </div>
+    <footer>Deutsch lernen · Jeden Tag ein bisschen besser.</footer>
+  </main>
+  <script>
+    (() => {
+      const repo = 'https://api.github.com/repos/JieDong726/Germanlearning/contents/';
+      const pageBase = 'https://jiedong726.github.io/Germanlearning/';
+      const cards = document.getElementById('cards');
+      const info = document.getElementById('info');
+      const count = document.getElementById('count');
+      const titleFor = name => {
+        if (/genitiv|genitive|第二格/i.test(name)) return 'Genitiv · 第二格（物主词、冠词与名词词尾）';
+        if (/futur|future|adverb|频率/i.test(name)) return 'Futur I · 将来时与频率副词';
+        return name.replace(/\.html$/i, '').replace(/[_-]/g, ' ');
+      };
+      fetch(repo + '?ref=main', {headers:{Accept:'application/vnd.github+json'}})
+        .then(response => {if(!response.ok)throw new Error('GitHub API HTTP '+response.status); return response.json();})
+        .then(files => {
+          if(!Array.isArray(files))throw new Error('未返回文件列表');
+          const html = files.filter(f => f.type==='file' && /\.html$/i.test(f.name) && f.name.toLowerCase()!=='index.html')
+            .sort((a,b)=>a.name.localeCompare(b.name));
+          count.textContent=`· ${html.length} 个专题`;
+          cards.replaceChildren();
+          if(!html.length){
+            cards.innerHTML='<div class="notice">还没有检测到其他 .html 文件。请确认文件位于仓库 main 分支的根目录，文件名以 <strong>.html</strong> 结尾。</div>';
+          } else {
+            html.forEach((f,i)=>{
+              const a=document.createElement('a');a.className='card';
+              a.href=pageBase+f.name.split('/').map(encodeURIComponent).join('/');
+              const num=document.createElement('span');num.className='num';num.textContent='GRAMMATIK '+String(i+1).padStart(2,'0');
+              const name=document.createElement('span');name.className='name';name.textContent=titleFor(f.name);
+              const meta=document.createElement('span');meta.className='meta';meta.textContent=f.name;
+              const go=document.createElement('span');go.className='go';go.textContent='打开练习册 →';
+              a.append(num,name,meta,go);cards.appendChild(a);
+            });
+          }
+          const missing=files.filter(f=>f.type==='file' && /genitiv|genitive/i.test(f.name) && !/\.html$/i.test(f.name));
+          if(missing.length){
+            info.hidden=false;
+            info.textContent='注意：检测到 '+missing.map(f=>f.name).join('、')+' 文件尚未以 .html 结尾。请在 GitHub 将文件名加上 .html，保存后才会出现在上面的练习册列表。';
+          }
+        })
+        .catch(()=>{
+          count.textContent='';
+          cards.innerHTML='<div class="notice"><strong>暂时无法自动读取练习册。</strong>请检查网络连接，或稍后刷新本页。你也可以点击下面的“管理 GitHub 练习文件”，找到你的 HTML 文件，并检查文件是否以 .html 结尾。</div>';
+        });
+    })();
+  </script>
+</body>
+</html>
