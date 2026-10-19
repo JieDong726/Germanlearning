@@ -54,6 +54,7 @@
       const titleFor = name => {
         if (/genitiv|genitive|第二格/i.test(name)) return 'Genitiv · 第二格（物主词、冠词与名词词尾）';
         if (/futur|future|adverb|频率/i.test(name)) return 'Futur I · 将来时与频率副词';
+        if (/konjunktiv|modalverben|praeteritum/i.test(name)) return 'Konjunktiv II · 第二虚拟式与情态动词过去时';
         return name.replace(/\.html$/i, '').replace(/[_-]/g, ' ');
       };
       fetch(repo + '?ref=main', {headers:{Accept:'application/vnd.github+json'}})
