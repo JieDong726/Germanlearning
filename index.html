@@ -54,6 +54,7 @@
       const titleFor = name => {
         if (/genitiv|genitive|第二格/i.test(name)) return 'Genitiv · 第二格（物主词、冠词与名词词尾）';
         if (/futur|future|adverb|频率/i.test(name)) return 'Futur I · 将来时与频率副词';
+        if (/konjunktivII_beruf_training/i.test(name)) return 'Konjunktiv II · 职场第二虚拟式强化（礼貌请求、建议与假设）';
         if (/konjunktiv|modalverben|praeteritum/i.test(name)) return 'Konjunktiv II · 第二虚拟式与情态动词过去时';
         return name.replace(/\.html$/i, '').replace(/[_-]/g, ' ');
       };
