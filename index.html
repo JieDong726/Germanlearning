@@ -55,6 +55,7 @@
         if (/genitiv|genitive|第二格/i.test(name)) return 'Genitiv · 第二格（物主词、冠词与名词词尾）';
         if (/futur|future|adverb|频率/i.test(name)) return 'Futur I · 将来时与频率副词';
         if (/konjunktivII_beruf_training/i.test(name)) return 'Konjunktiv II · 过去假设、遗憾与双不定式';
+        if (/^B1_Praeteritum_Beruf_Training\.html$/i.test(name)) return 'Präteritum · 规则、不规则与混合变化（职场过去时）';
         if (/konjunktiv|modalverben|praeteritum/i.test(name)) return 'Konjunktiv II · 第二虚拟式与情态动词过去时';
         return name.replace(/\.html$/i, '').replace(/[_-]/g, ' ');
       };
