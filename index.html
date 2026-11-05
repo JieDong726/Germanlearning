@@ -1,96 +1,69 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <title>Deutsch B1 | 我的职场德语语法练习</title>
-  <style>
-    :root{--bg:#f5f8ff;--ink:#162540;--muted:#60728e;--line:#dae4f0;--blue:#255dcf;--shadow:0 16px 36px rgba(35,63,106,.08)}
-    *{box-sizing:border-box}body{margin:0;background:linear-gradient(150deg,#edf4ff 0%,#f7fbff 50%,#f5f9fa 100%);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);min-height:100vh}
-    .wrap{max-width:960px;margin:auto;padding:52px 24px 70px} .eyebrow{font-size:.78rem;font-weight:750;letter-spacing:.13em;text-transform:uppercase;color:var(--blue)}
-    h1{font-size:clamp(2rem,5vw,3rem);margin:14px 0 11px;letter-spacing:-.045em} .intro{font-size:1.05rem;color:var(--muted);line-height:1.85;max-width:650px;margin:0 0 32px}
-    .top{border:1px solid #e6edf7;background:rgba(255,255,255,.83);border-radius:23px;padding:36px;box-shadow:var(--shadow)}
-    .pills{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}.pill{border-radius:999px;padding:7px 12px;font-size:.83rem;font-weight:650;background:#edf3ff;color:#2854a4}
-    h2{font-size:1.4rem;margin:36px 0 16px}.sub{color:var(--muted);font-size:.93rem;margin-top:-6px;line-height:1.7}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:16px;margin-top:22px}
-    .card{display:flex;flex-direction:column;text-decoration:none;color:inherit;border:1px solid var(--line);background:white;border-radius:20px;padding:23px;min-height:185px;box-shadow:var(--shadow);transition:transform .14s,border-color .14s}
-    .card:hover,.card:focus-visible{transform:translateY(-3px);border-color:#7799e8;outline:none}
-    .num{width:max-content;padding:5px 10px;border-radius:9px;background:#eff4ff;color:#3464c5;font-weight:800;font-size:.78rem}
-    .name{font-weight:750;font-size:1.14rem;line-height:1.55;overflow-wrap:anywhere;margin:16px 0 6px}
-    .meta{font-size:.85rem;color:var(--muted);line-height:1.6;margin-top:auto}
-    .go{color:var(--blue);font-weight:730;margin-top:16px}
-    .notice{border:1px solid var(--line);background:#fff;border-radius:15px;padding:17px 20px;line-height:1.75;color:#4d617b;margin-top:18px}
-    .notice strong{color:var(--ink)}a{color:var(--blue)}.actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:26px}.actions a{text-decoration:none;font-weight:650;font-size:.93rem}
-    footer{margin-top:38px;color:#7f8ca1;font-size:.8rem}
-    @media(max-width:570px){.wrap{padding:22px 14px 44px}.top{padding:25px 20px}h2{margin-top:29px}.card{min-height:155px}}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Deutsch B1 Beruf | 我的德语语法学习路线</title>
+<meta name="description" content="B1 职场德语按先修知识由浅入深排列：主句语序、Präteritum、Genitiv、原因条件让步从句、Konjunktiv II。自动收录 GitHub HTML 练习册。">
+<style>
+:root{--bg:#f3f7fc;--ink:#21354d;--muted:#657a92;--line:#dbe6f1;--white:#fff;--navy:#1d3958;--blue:#3468ab;--teal:#087e76;--soft:#eaf2fb;--shadow:0 12px 36px rgba(24,53,87,.055)}*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(146deg,#eaf3ff 0,#f5f9fc 39%,#f5f9fb 100%);color:var(--ink);font:15px/1.7 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}a{color:var(--blue)}button{font:inherit;cursor:pointer}.wrap{max-width:1050px;margin:auto;padding:35px 21px 75px}.hero{background:linear-gradient(115deg,#fff 0,#fff 55%,#edf9f7 100%);border:1px solid #dce7f2;border-radius:24px;padding:35px 39px;box-shadow:var(--shadow)}.eyebrow{font-size:11px;letter-spacing:.17em;color:var(--teal);font-weight:850;text-transform:uppercase}.hero h1{font-size:clamp(28px,5vw,43px);letter-spacing:-.046em;line-height:1.24;margin:14px 0 12px}.hero p{color:var(--muted);max-width:720px;margin:0}.pills{display:flex;gap:9px;flex-wrap:wrap;margin-top:23px}.pill{padding:6px 11px;border-radius:100px;background:#eff5fa;color:#3e6486;font-size:12px;font-weight:750}.section-title{margin:32px 0 7px;font-size:24px;letter-spacing:-.025em}.sub{color:var(--muted);margin:0 0 18px;font-size:13px}.legend{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0 14px}.legend span{display:inline-block;background:#edf3fa;border:1px solid #dfebf5;border-radius:9px;padding:8px 10px;color:#54708c;font-size:12px;font-weight:700}.route{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.item{border:1px solid var(--line);background:#fff;border-radius:19px;padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:240px}.head{display:flex;align-items:flex-start;gap:13px}.step{background:#eaf2fc;color:#295a95;font-size:15px;font-weight:900;border-radius:12px;padding:9px 12px;white-space:nowrap}.item:nth-child(n+4) .step{background:#e5f5ef;color:#197967}.title{font-size:19px;letter-spacing:-.02em;line-height:1.45;font-weight:850;margin:2px 0 9px}.meta{color:#63819a;font-size:12px;font-weight:700;margin-bottom:9px}.desc{font-size:13px;color:#526c83;line-height:1.85;margin:3px 0 10px}.requires{border-left:3px solid #c7dbe8;padding-left:10px;color:#73869b;font-size:12px;line-height:1.7;margin:0 0 16px}.itemfoot{margin-top:auto;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;border-top:1px solid #eef2f7;padding-top:13px}.go{background:var(--navy);color:white;border-radius:10px;padding:9px 13px;font-weight:750;font-size:13px;text-decoration:none}.go:hover{background:#2b547e}.mark{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:#5b748e;cursor:pointer}.mark input{width:17px;height:17px;accent-color:#18846e}.item.done{border-color:#9ac7b4;background:linear-gradient(160deg,#fff,#f5fdf9)}.item.done .step{background:#d4f2e5;color:#17684c}.notice{padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:14px;color:#5b7188;line-height:1.75;font-size:13px;margin:18px 0}.stats{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin-top:14px}.stats .count{font-weight:800;color:#1f7d6d;font-size:13px}.progress{flex:1;min-width:130px;max-width:260px;height:8px;border-radius:10px;background:#e1ebf3;overflow:hidden}.progress>span{display:block;width:0;height:100%;background:#16937e;transition:width .2s}.extra{border:1px solid #e1e9f0;border-radius:18px;background:#fff;padding:20px 24px;margin-top:23px}.extra h2{margin:0 0 7px;font-size:18px}.extra p{margin:0;color:#668096;font-size:13px;line-height:1.9}.extras{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:13px}.extras a{display:block;border:1px solid #e1eaf0;padding:13px 14px;border-radius:11px;color:#325979;text-decoration:none;font-weight:700;overflow-wrap:anywhere}.links{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;font-weight:750;margin-top:25px}.footer{color:#8a9bac;font-size:12px;margin-top:38px}.loading{grid-column:1/-1;padding:35px;background:white;border:1px dashed #c8d9e7;border-radius:16px;color:#6f849a;text-align:center}.tag{font-size:11px;color:#6986a1;font-weight:750;border-radius:6px;padding:3px 7px;background:#f0f5fb;width:max-content;margin-bottom:7px}
+@media(max-width:710px){.wrap{padding:16px 11px 50px}.hero{padding:25px 19px}.route{grid-template-columns:1fr}.item{min-height:0}.extras{grid-template-columns:1fr}.section-title{margin-top:28px}.title{font-size:18px}.item{padding:19px}}
+@media(prefers-reduced-motion:reduce){.progress>span{transition:none}}
+</style>
 </head>
-<body>
-  <main class="wrap">
-    <section class="top">
-      <div class="eyebrow">Mein Deutschtraining · B1 Beruf</div>
-      <h1>我的 B1 职场德语练习册</h1>
-      <p class="intro">把语法规则记清楚，再用职场情境反复练习。选择下面的语法专题，开始学习、填空、自动批改和错题复习。</p>
-      <div class="pills"><span class="pill">语法一眼速记</span><span class="pill">职场德语 B1</span><span class="pill">互动练习</span><span class="pill">随时复习</span></div>
-    </section>
-    <h2>语法专题 <span id="count" style="font-weight:500;color:#7989a1;font-size:1rem"></span></h2>
-    <p class="sub">这个页面会自动读取你在 GitHub 仓库根目录上传的 <code>.html</code> 练习册。以后添加新练习册，不必再改首页。</p>
-    <div id="cards" class="cards" aria-live="polite"><div class="notice">正在读取练习册列表……</div></div>
-    <div id="info" class="notice" hidden></div>
-    <div class="actions">
-      <a href="https://github.com/JieDong726/Germanlearning" target="_blank" rel="noopener noreferrer">管理 GitHub 练习文件 ↗</a>
-      <a href="https://github.com/JieDong726/Germanlearning/settings/pages" target="_blank" rel="noopener noreferrer">查看 Pages 部署设置 ↗</a>
-    </div>
-    <footer>Deutsch lernen · Jeden Tag ein bisschen besser.</footer>
-  </main>
-  <script>
-    (() => {
-      const repo = 'https://api.github.com/repos/JieDong726/Germanlearning/contents/';
-      const pageBase = 'https://jiedong726.github.io/Germanlearning/';
-      const cards = document.getElementById('cards');
-      const info = document.getElementById('info');
-      const count = document.getElementById('count');
-      const titleFor = name => {
-        if (/genitiv|genitive|第二格/i.test(name)) return 'Genitiv · 第二格（物主词、冠词与名词词尾）';
-        if (/futur|future|adverb|频率/i.test(name)) return 'Futur I · 将来时与频率副词';
-        if (/konjunktivII_beruf_training/i.test(name)) return 'Konjunktiv II · 过去假设、遗憾与双不定式';
-        if (/^B1_Praeteritum_Beruf_Training\.html$/i.test(name)) return 'Präteritum · 规则、不规则与混合变化（职场过去时）';
-        if (/konjunktiv|modalverben|praeteritum/i.test(name)) return 'Konjunktiv II · 第二虚拟式与情态动词过去时';
-        return name.replace(/\.html$/i, '').replace(/[_-]/g, ' ');
-      };
-      fetch(repo + '?ref=main', {headers:{Accept:'application/vnd.github+json'}})
-        .then(response => {if(!response.ok)throw new Error('GitHub API HTTP '+response.status); return response.json();})
-        .then(files => {
-          if(!Array.isArray(files))throw new Error('未返回文件列表');
-          const html = files.filter(f => f.type==='file' && /\.html$/i.test(f.name) && f.name.toLowerCase()!=='index.html')
-            .sort((a,b)=>a.name.localeCompare(b.name));
-          count.textContent=`· ${html.length} 个专题`;
-          cards.replaceChildren();
-          if(!html.length){
-            cards.innerHTML='<div class="notice">还没有检测到其他 .html 文件。请确认文件位于仓库 main 分支的根目录，文件名以 <strong>.html</strong> 结尾。</div>';
-          } else {
-            html.forEach((f,i)=>{
-              const a=document.createElement('a');a.className='card';
-              a.href=pageBase+f.name.split('/').map(encodeURIComponent).join('/');
-              const num=document.createElement('span');num.className='num';num.textContent='GRAMMATIK '+String(i+1).padStart(2,'0');
-              const name=document.createElement('span');name.className='name';name.textContent=titleFor(f.name);
-              const meta=document.createElement('span');meta.className='meta';meta.textContent=f.name;
-              const go=document.createElement('span');go.className='go';go.textContent='打开练习册 →';
-              a.append(num,name,meta,go);cards.appendChild(a);
-            });
-          }
-          const missing=files.filter(f=>f.type==='file' && /genitiv|genitive/i.test(f.name) && !/\.html$/i.test(f.name));
-          if(missing.length){
-            info.hidden=false;
-            info.textContent='注意：检测到 '+missing.map(f=>f.name).join('、')+' 文件尚未以 .html 结尾。请在 GitHub 将文件名加上 .html，保存后才会出现在上面的练习册列表。';
-          }
-        })
-        .catch(()=>{
-          count.textContent='';
-          cards.innerHTML='<div class="notice"><strong>暂时无法自动读取练习册。</strong>请检查网络连接，或稍后刷新本页。你也可以点击下面的“管理 GitHub 练习文件”，找到你的 HTML 文件，并检查文件是否以 .html 结尾。</div>';
-        });
-    })();
-  </script>
-</body>
-</html>
+<body><main class="wrap">
+<section class="hero"><div class="eyebrow">Mein Deutschtraining · B1 Beruf</div><h1>我的职场德语<br>按先修知识学习</h1><p>不再按文件名或上传日期排列，而是按<strong>“基础语序与变位 → 过去时 → 名词格变化 → 复句连接 → 虚拟式基础 → 过去的非现实假设”</strong>由易到难安排。每个专题都可以独立复习，但建议按下面的顺序逐步攻克。</p><div class="pills"><span class="pill">教材式语法速记</span><span class="pill">B1 职场情境</span><span class="pill">每课自动批改</span><span class="pill">错题复习</span><span class="pill">新增练习自动收录</span></div><div class="stats"><span class="count" id="progressCount">推荐路线读取中…</span><div class="progress"><span id="progressBar"></span></div></div></section>
+<h2 class="section-title">推荐学习路线 <small id="courseCount" style="font-size:14px;color:#8599ac;font-weight:600"></small></h2>
+<p class="sub">数字代表<strong>建议学习步骤</strong>，不代表原书的课次。第 03 步 Genitiv 也可以与第 04 步并行；但学完句子连接，再做复杂的 Konjunktiv II 会更顺畅。</p>
+<div class="legend"><span>先掌握第 01–02 步的句子和时态</span><span>第 03–04 步练习准确表达</span><span>第 05–06 步学习虚拟式</span></div>
+<div class="route" id="route" aria-live="polite"><div class="loading">正在读取你 GitHub 仓库中的练习册…</div></div>
+<div class="notice"><strong>每课怎样算学会？</strong>不看顶部语法表，能独立写出 3 句符合职场场景的德语句子；连续两轮测试正确率约 85% 以上，且主要错题能自行订正，就可勾选“已掌握”进入下一课。<br>勾选状态只保存在此浏览器中，不会同步到其他设备。</div>
+<section class="extra" id="extraSection" hidden><h2>额外练习册</h2><p>新上传但尚未纳入推荐路线的 HTML 会先显示在这里，依然可以直接使用。</p><div class="extras" id="extraList"></div></section>
+<div class="links"><a href="https://github.com/JieDong726/Germanlearning" target="_blank" rel="noopener noreferrer">管理 GitHub 文件 ↗</a><a href="https://github.com/JieDong726/Germanlearning/settings/pages" target="_blank" rel="noopener noreferrer">查看 Pages 部署 ↗</a></div>
+<div class="footer">Deutsch lernen · Jeden Tag ein bisschen besser. · 所有课程会从 GitHub 根目录读取 .html 文件。</div>
+</main>
+<script>
+(()=>{
+const repoApi='https://api.github.com/repos/JieDong726/Germanlearning/contents/?ref=main';
+const base='https://jiedong726.github.io/Germanlearning/';
+const key='b1-beruf-study-route-done-v1';
+const route=[
+ {id:'grundlagen',rx:/future 1 and adverbs of frequency\.html$|futur.*adverb/i,title:'Futur I · 将来时与频率副词',de:'语序与基础表达',why:'先把主句动词第二位、时间表达和简单的动词框架练熟；后面每一课都用得上。',requires:'先修：德语现在时的基本变位。'},
+ {id:'praeteritum',rx:/^B1_Praeteritum_Beruf_Training\.html$/i,title:'Präteritum · 过去时',de:'规则、不规则与混合变化',why:'学习过去时动词词干和词尾，为 später 的 konnte/könnte、hatte/hätte 区分打基础。',requires:'先修：第 01 步的句子结构和变位。'},
+ {id:'genitiv',rx:/Genitiv|Genitive/i,title:'Genitiv · 第二格',de:'物主词、冠词与名词词尾',why:'巩固职场合同、报告、项目中的名词、冠词和物主词变化；属于可独立训练的格变化模块。',requires:'先修：基本冠词与格的概念；可与第 04 步并行。'},
+ {id:'satzverbindungen',rx:/^B1_Satzverbindungen_Weil_Da_Deshalb_Wenn_Falls_Obwohl_Trotzdem\.html$/i,title:'句子连接 · 原因、条件与让步',de:'weil / da / deshalb · wenn / falls · obwohl / trotzdem',why:'第一次系统学从句：动词放末尾，以及 deshalb/trotzdem 后主句倒装。为条件虚拟式打好基础。',requires:'先修：主句动词第二位 + 基本动词变位；建议先做第 01–02 步。'},
+ {id:'modal',rx:/modalverben_praeteritum/i,title:'Konjunktiv II 入门 · 情态动词',de:'konnte / könnte · musste / müsste · hätte / wäre',why:'先区分真正发生的过去时与虚拟式，练习委婉请求、建议和简单假设。',requires:'先修：第 02 步的 Präteritum；最好已了解第 04 步的 wenn 语序。'},
+ {id:'advanced',rx:/^B1_KonjunktivII_Beruf_Training\.html$/i,title:'Konjunktiv II 进阶 · 过去假设与遗憾',de:'hätte gemacht · wäre gegangen · hätte machen können/sollen',why:'最后再学过去的非现实条件、双不定式和“过去影响现在”，这里需要时态、从句与虚拟式一起使用。',requires:'先修：第 02、04、05 步；这是目前路线中最综合的一课。'}
+];
+let done=[];try{done=JSON.parse(localStorage.getItem(key)||'[]')}catch(e){};
+const enc=n=>base+encodeURIComponent(n);
+const txt=(tag,cls,value)=>{let e=document.createElement(tag);if(cls)e.className=cls;e.textContent=value;return e;};
+const fallback=[
+ 'B1.1. Grammer future 1 and Adverbs of Frequency.html',
+ 'B1_Praeteritum_Beruf_Training.html',
+ 'B1.1. Grammer.Genitive.html',
+ 'B1_Satzverbindungen_Weil_Da_Deshalb_Wenn_Falls_Obwohl_Trotzdem.html',
+ 'B1.1 grammer KonjunktivII_Modalverben_Praeteritum.html',
+ 'B1_KonjunktivII_Beruf_Training.html'
+].map(name=>({name,type:'file'}));
+function updateProgress(){const available=document.querySelectorAll('.mark input');const total=available.length;let n=0;available.forEach(b=>{if(b.checked)n++});$('progressCount').textContent=`已掌握 ${n} / ${total} 个推荐专题`;$('progressBar').style.width=total?(100*n/total)+'%':'0';}
+const $=id=>document.getElementById(id);
+function render(list,warn){const html=list.filter(f=>f.type==='file'&&/\.html$/i.test(f.name)&&f.name.toLowerCase()!=='index.html');
+ const used=new Set();let present=0;const wrap=$('route');wrap.replaceChildren();
+ for(let i=0;i<route.length;i++){const item=route[i];const found=html.find(f=>item.rx.test(f.name)&&!used.has(f.name));if(!found)continue;used.add(found.name);present++;
+  const article=txt('article','item','');article.dataset.lesson=item.id;if(done.includes(item.id))article.classList.add('done');
+  const header=txt('div','head','');const step=txt('span','step',String(i+1).padStart(2,'0'));const body=txt('div','','');body.append(txt('div','tag','推荐第 '+(i+1)+' 步'),txt('h3','title',item.title),txt('div','meta',item.de));header.append(step,body);article.append(header);
+  article.append(txt('p','desc',item.why),txt('p','requires',item.requires));
+  const foot=txt('div','itemfoot','');const link=txt('a','go','打开互动练习册 →');link.href=enc(found.name);
+  const label=txt('label','mark','');const check=document.createElement('input');check.type='checkbox';check.checked=done.includes(item.id);check.setAttribute('aria-label','标记 '+item.title+' 为已掌握');check.addEventListener('change',()=>{if(check.checked&&!done.includes(item.id))done.push(item.id);if(!check.checked)done=done.filter(x=>x!==item.id);try{localStorage.setItem(key,JSON.stringify(done));}catch(e){}article.classList.toggle('done',check.checked);updateProgress();});label.append(check,txt('span','', '已掌握'));foot.append(link,label);article.append(foot);wrap.append(article);
+ }
+ if(!present)wrap.append(txt('div','loading','尚未找到推荐课程，请确认 .html 文件在 main 根目录。'));
+ $('courseCount').textContent='· '+present+' 个已收录专题';
+ const extras=html.filter(f=>!used.has(f.name));if(extras.length){$('extraSection').hidden=false;const list=$('extraList');list.replaceChildren();extras.forEach(f=>{const a=txt('a','',f.name.replace(/\.html$/i,'').replace(/[_-]/g,' '));a.href=enc(f.name);list.append(a);});}else $('extraSection').hidden=true;
+ if(warn){const p=txt('p','sub','GitHub 暂时无法返回最新目录，当前显示上次确认的课程链接；新上传课程可能需要稍后刷新才能看到。');wrap.before(p);}
+ updateProgress();}
+fetch(repoApi,{headers:{Accept:'application/vnd.github+json'},cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(a=>{if(!Array.isArray(a))throw Error('Not a directory');render(a,false)}).catch(()=>render(fallback,true));
+})();
+</script>
+</body></html>
