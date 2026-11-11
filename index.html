@@ -13,10 +13,10 @@ body{margin:0;background:linear-gradient(146deg,#eaf3ff 0,#f5f9fc 39%,#f5f9fb 10
 </style>
 </head>
 <body><main class="wrap">
-<section class="hero"><div class="eyebrow">Mein Deutschtraining · B1 Beruf</div><h1>我的职场德语<br>按先修知识学习</h1><p>不再按文件名或上传日期排列，而是按<strong>“基础语序与变位 → 过去时 → 反身动词（第四格/第三格） → 复句连接 → 名词格变化 → 名词化形容词及口语 → 虚拟式基础 → 过去的非现实假设”</strong>由易到难安排。每个专题都可以独立复习，但建议按下面的顺序逐步攻克。</p><div class="pills"><span class="pill">教材式语法速记</span><span class="pill">B1 职场情境</span><span class="pill">每课自动批改</span><span class="pill">错题复习</span><span class="pill">新增练习自动收录</span></div><div class="stats"><span class="count" id="progressCount">推荐路线读取中…</span><div class="progress"><span id="progressBar"></span></div></div></section>
+<section class="hero"><div class="eyebrow">Mein Deutschtraining · B1 Beruf</div><h1>我的职场德语<br>按先修知识学习</h1><p>不再按文件名或上传日期排列，而是按<strong>“基础语序与变位 → 过去时 → 反身动词（第四格/第三格） → 复句连接 → 目的表达 um … zu / damit → 名词格变化 → 名词化形容词及口语 → 虚拟式基础 → 过去的非现实假设”</strong>由易到难安排。每个专题都可以独立复习，但建议按下面的顺序逐步攻克。</p><div class="pills"><span class="pill">教材式语法速记</span><span class="pill">B1 职场情境</span><span class="pill">每课自动批改</span><span class="pill">错题复习</span><span class="pill">新增练习自动收录</span></div><div class="stats"><span class="count" id="progressCount">推荐路线读取中…</span><div class="progress"><span id="progressBar"></span></div></div></section>
 <h2 class="section-title">推荐学习路线 <small id="courseCount" style="font-size:14px;color:#8599ac;font-weight:600"></small></h2>
-<p class="sub">数字代表<strong>建议学习步骤</strong>，不代表原书的课次。第 03 步先练反身代词 Akkusativ / Dativ；第 04–05 步学复句与格变化，第 06 步练名词化形容词与口语，第 07–08 步再进入第二虚拟式。</p>
-<div class="legend"><span>第 01–03 步：句式、时态与反身代词</span><span>第 04–06 步：复句、格变化与口语</span><span>第 07–08 步：深入第二虚拟式</span></div>
+<p class="sub">数字代表<strong>建议学习步骤</strong>，不代表原书的课次。第 03 步先练反身代词 Akkusativ / Dativ；第 04 步掌握从句语序，第 05 步学习 um … zu / damit；第 06 步练格变化，第 07 步练名词化形容词与口语，第 08–09 步再进入第二虚拟式。</p>
+<div class="legend"><span>第 01–03 步：句式、时态与反身代词</span><span>第 04–07 步：从句、目的表达与口语</span><span>第 08–09 步：深入第二虚拟式</span></div>
 <div class="route" id="route" aria-live="polite"><div class="loading">正在读取你 GitHub 仓库中的练习册…</div></div>
 <div class="notice"><strong>每课怎样算学会？</strong>不看顶部语法表，能独立写出 3 句符合职场场景的德语句子；连续两轮测试正确率约 85% 以上，且主要错题能自行订正，就可勾选“已掌握”进入下一课。<br>勾选状态只保存在此浏览器中，不会同步到其他设备。</div>
 <section class="extra" id="extraSection" hidden><h2>额外练习册</h2><p>新上传但尚未纳入推荐路线的 HTML 会先显示在这里，依然可以直接使用。</p><div class="extras" id="extraList"></div></section>
@@ -33,10 +33,11 @@ const route=[
  {id:'praeteritum',rx:/^B1_Praeteritum_Beruf_Training\.html$/i,title:'Präteritum · 过去时',de:'规则、不规则与混合变化',why:'学习过去时动词词干和词尾，为 später 的 konnte/könnte、hatte/hätte 区分打基础。',requires:'先修：第 01 步的句子结构和变位。'},
  {id:'reflexive',rx:/^B1_Reflexive_Verben_Akkusativ_Dativ_Beruf\.html$/i,title:'Reflexive Verben · 反身动词 Akkusativ / Dativ',de:'mich / mir · dich / dir · sich bedanken / sich etwas merken',why:'先熟悉反身代词的两种格与常见固定搭配，再练面试感谢、会议准备、记下工作安排等高频表达。',requires:'先修：人称代词及 Akkusativ / Dativ 的基本概念；本课也是后面复句和口语训练的基础。'},
  {id:'satzverbindungen',rx:/^B1_Satzverbindungen_Weil_Da_Deshalb_Wenn_Falls_Obwohl_Trotzdem\.html$/i,title:'句子连接 · 原因、条件与让步',de:'weil / da / deshalb · wenn / falls · obwohl / trotzdem',why:'第一次系统学从句：动词放末尾，以及 deshalb/trotzdem 后主句倒装。为条件虚拟式打好基础。',requires:'先修：主句动词第二位 + 基本动词变位；建议先做第 01–02 步。'},
- {id:'genitiv',rx:/Genitiv|Genitive/i,title:'Genitiv · 第二格',de:'物主词、冠词与名词词尾',why:'巩固职场合同、报告、项目中的名词、冠词和物主词变化；属于可独立训练的格变化模块。',requires:'先修：基本冠词与格的概念；可与第 04 步并行。'},
- {id:'nominal',rx:/^B1_Substantivierte_Adjektive_Beruf_Sprechen\.html$/i,title:'名词化形容词 · 职场口语',de:'das Gute / das Wichtigste / etwas Neues · Das Wichtigste ist, dass …',why:'用已学过的格变化和从句结构，把形容词变成名词，练习面试与会议里的高频口语句型。',requires:'先修：第 05 步的冠词与格变化，以及第 04 步的 dass 类从句语序。'},
+ {id:'purpose',rx:/^B1_Um_Zu_Damit_Wozu_Beruf\.html$/i,title:'目的表达 · um … zu / damit / wozu',de:'同一行动者 um … zu · 不同主体 damit · Wozu 与 Warum',why:'学完 weil / wenn 等从句后，继续练习表达职场行动的目的、区分主语以及不同的动词位置。',requires:'先修：第 04 步从句的动词句末语序，以及主句动词第二位。'},
+ {id:'genitiv',rx:/Genitiv|Genitive/i,title:'Genitiv · 第二格',de:'物主词、冠词与名词词尾',why:'巩固职场合同、报告、项目中的名词、冠词和物主词变化；属于可独立训练的格变化模块。',requires:'先修：基本冠词与格的概念；可与第 05 步并行。'},
+ {id:'nominal',rx:/^B1_Substantivierte_Adjektive_Beruf_Sprechen\.html$/i,title:'名词化形容词 · 职场口语',de:'das Gute / das Wichtigste / etwas Neues · Das Wichtigste ist, dass …',why:'用已学过的格变化和从句结构，把形容词变成名词，练习面试与会议里的高频口语句型。',requires:'先修：第 06 步的冠词与格变化，以及第 04 步的从句句末语序。'},
  {id:'modal',rx:/modalverben_praeteritum/i,title:'Konjunktiv II 入门 · 情态动词',de:'konnte / könnte · musste / müsste · hätte / wäre',why:'先区分真正发生的过去时与虚拟式，练习委婉请求、建议和简单假设。',requires:'先修：第 02 步的 Präteritum；最好已了解第 04 步的 wenn 语序。'},
- {id:'advanced',rx:/^B1_KonjunktivII_Beruf_Training\.html$/i,title:'Konjunktiv II 进阶 · 过去假设与遗憾',de:'hätte gemacht · wäre gegangen · hätte machen können/sollen',why:'最后再学过去的非现实条件、双不定式和“过去影响现在”，这里需要时态、从句与虚拟式一起使用。',requires:'先修：第 02、04、07 步；这是目前路线中最综合的一课。'}
+ {id:'advanced',rx:/^B1_KonjunktivII_Beruf_Training\.html$/i,title:'Konjunktiv II 进阶 · 过去假设与遗憾',de:'hätte gemacht · wäre gegangen · hätte machen können/sollen',why:'最后再学过去的非现实条件、双不定式和“过去影响现在”，这里需要时态、从句与虚拟式一起使用。',requires:'先修：第 02、04、08 步；这是目前路线中最综合的一课。'}
 ];
 let done=[];try{done=JSON.parse(localStorage.getItem(key)||'[]')}catch(e){};
 const enc=n=>base+encodeURIComponent(n);
@@ -46,6 +47,7 @@ const fallback=[
  'B1_Praeteritum_Beruf_Training.html',
  'B1_Reflexive_Verben_Akkusativ_Dativ_Beruf.html',
  'B1_Satzverbindungen_Weil_Da_Deshalb_Wenn_Falls_Obwohl_Trotzdem.html',
+ 'B1_Um_Zu_Damit_Wozu_Beruf.html',
  'B1.1. Grammer.Genitive.html',
  'B1_Substantivierte_Adjektive_Beruf_Sprechen.html',
  'B1.1 grammer KonjunktivII_Modalverben_Praeteritum.html',
