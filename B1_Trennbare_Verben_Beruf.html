@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B1 职场德语｜可分动词 Trennbare Verben｜互动练习</title>
+<style>
+  :root{
+    --bg:#f3f7fc; --paper:#ffffff; --ink:#18324b; --muted:#62788f; --line:#d8e3ee;
+    --blue:#3568aa; --teal:#0b8077; --teal-soft:#e9f7f4; --blue-soft:#eaf2fb;
+    --amber:#d38b00; --ok:#14845e; --bad:#be3f3f; --shadow:0 14px 40px rgba(25,54,88,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;background:linear-gradient(180deg,#eef4fb 0%,#f9fbfe 100%);color:var(--ink);line-height:1.65}
+  .page{max-width:1120px;margin:0 auto;padding:28px 18px 80px}
+  .hero{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:26px 24px 20px;box-shadow:var(--shadow)}
+  .eyebrow{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--blue-soft);color:var(--blue);font-weight:800;font-size:.86rem;letter-spacing:.02em}
+  h1{margin:12px 0 6px;font-size:clamp(2rem,4vw,3rem);line-height:1.15}
+  .sub{color:var(--muted);font-size:1.04rem;margin:0}
+  .topline{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+  .pill{display:inline-block;padding:7px 12px;border-radius:999px;background:#f6f9fd;border:1px solid var(--line);font-size:.92rem}
+  .notice{margin-top:16px;padding:14px 16px;border-radius:16px;background:#fffdf5;border:1px solid #f0e0a6;color:#715500}
+
+  nav.toc{margin:20px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+  nav.toc a{text-decoration:none;color:inherit;background:#f8fbff;border:1px solid var(--line);padding:14px 16px;border-radius:16px;font-weight:700}
+  nav.toc a:hover{border-color:#99b5da;transform:translateY(-1px)}
+
+  section.card{margin-top:18px;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow)}
+  h2{margin:0 0 8px;font-size:1.45rem}
+  h3{margin:22px 0 10px;font-size:1.1rem}
+  .cn{color:var(--muted);font-size:.96rem}
+  .grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media (max-width:880px){.grid2,.grid3{grid-template-columns:1fr}}
+
+  table{width:100%;border-collapse:collapse;background:#fff;overflow:hidden;border-radius:16px}
+  .tablewrap{overflow:auto;border:1px solid var(--line);border-radius:18px}
+  th,td{border-bottom:1px solid var(--line);padding:11px 12px;text-align:left;vertical-align:top}
+  th{background:#f7fbff;font-size:.95rem}
+  tr:last-child td{border-bottom:none}
+
+  .box{border:1px solid var(--line);border-radius:18px;padding:16px;background:#fbfdff}
+  .mini{font-size:.95rem}
+  .formula{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:10px}
+  .formula .item{background:#f7fbff;border:1px solid var(--line);border-radius:16px;padding:14px}
+  .item strong{display:block;margin-bottom:5px}
+
+  .list{margin:0;padding-left:18px}
+  .list li{margin:6px 0}
+  .good{color:var(--ok);font-weight:700}
+  .warn{color:var(--amber);font-weight:700}
+
+  .exercise{border:1px solid var(--line);border-radius:18px;padding:16px;margin-top:14px;background:#fcfeff}
+  .qhead{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px}
+  .qnum{display:inline-flex;min-width:32px;height:32px;border-radius:50%;align-items:center;justify-content:center;background:var(--teal-soft);color:var(--teal);font-weight:800}
+  .qtitle{font-weight:800;font-size:1.02rem}
+  .options{display:grid;gap:8px;margin-top:10px}
+  label.opt{display:flex;gap:10px;align-items:flex-start;padding:11px 12px;border:1px solid var(--line);border-radius:14px;background:#fff;cursor:pointer}
+  label.opt:hover{border-color:#8db0df}
+  input[type="text"], textarea, select{width:100%;padding:11px 12px;border:1px solid #bfd0e0;border-radius:12px;background:#fff;font:inherit;color:inherit}
+  textarea{min-height:88px;resize:vertical}
+  .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  button{appearance:none;border:none;background:var(--blue);color:#fff;padding:11px 16px;border-radius:12px;font:inherit;font-weight:800;cursor:pointer}
+  button.secondary{background:#eef4fb;color:var(--blue);border:1px solid #c9d9eb}
+  button.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .result{margin-top:12px;padding:12px 14px;border-radius:14px;display:none}
+  .result.show{display:block}
+  .okbg{background:#ebfaf3;color:#126346;border:1px solid #a8e2c7}
+  .badbg{background:#fff2f2;color:#8a2d2d;border:1px solid #f0bbbb}
+  .muted{color:var(--muted)}
+  .kbd{display:inline-block;border:1px solid var(--line);padding:2px 8px;border-radius:8px;background:#fff}
+  .pair-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:800px){.pair-grid{grid-template-columns:1fr}}
+  .pair-col .token{padding:12px 12px;background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:10px;cursor:pointer}
+  .pair-col .token.selected{outline:2px solid var(--blue);border-color:#7fa6d6;background:#f0f6ff}
+  .pair-col .token.done{background:#ebfaf3;border-color:#98d9ba;cursor:default}
+  .score{font-weight:800;color:var(--teal)}
+  .footer{margin-top:28px;color:var(--muted);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <span class="eyebrow">GRAMMATIK · B1 BERUF</span>
+    <h1>可分动词 Trennbare Verben</h1>
+    <p class="sub">按职场德语场景整理：规则总览 → 时态变化 → 高频短语 → 常见错误 → 互动练习与口语表达。</p>
+    <div class="topline">
+      <span class="pill">主句：前缀分开，放句尾</span>
+      <span class="pill">从句 / 情态动词：不分开</span>
+      <span class="pill">Perfekt：前缀 + ge + 词干</span>
+      <span class="pill">适合 B1 职场德语</span>
+    </div>
+    <p class="notice"><strong>一眼记忆：</strong> <strong>Ich rufe den Kunden an.</strong> / <strong>..., weil ich den Kunden anrufe.</strong> / <strong>Ich habe den Kunden angerufen.</strong> —— 先学这三句，几乎就掌握了可分动词的核心变形。</p>
+    <nav class="toc">
+      <a href="#quick">① 顶部速记</a>
+      <a href="#rules">② 规则与形式</a>
+      <a href="#verbs">③ 高频职场动词</a>
+      <a href="#errors">④ 常见错误</a>
+      <a href="#practice">⑤ 互动练习</a>
+      <a href="#speaking">⑥ 口语输出</a>
+    </nav>
+  </header>
+
+  <section id="quick" class="card">
+    <h2>① 顶部速记 · 一页看完</h2>
+    <p class="cn">参考你喜欢的“语法点放最上面”的方式，先把最重要的知识压缩成几条。</p>
+    <div class="formula">
+      <div class="item"><strong>1. 主句</strong>前缀分开，变位动词在第二位，前缀去句尾。<br><em>Ich <b>rufe</b> Sie morgen <b>an</b>.</em></div>
+      <div class="item"><strong>2. 从句</strong>前缀不分开，整个动词回到句末。<br><em>..., weil ich Sie morgen <b>anrufe</b>.</em></div>
+      <div class="item"><strong>3. 情态动词</strong>前缀不分开，原形放句末。<br><em>Ich <b>muss</b> Sie morgen <b>anrufen</b>.</em></div>
+      <div class="item"><strong>4. Perfekt</strong>常见形式：前缀 + <b>ge</b> + 词干。<br><em>Ich habe Sie gestern <b>angerufen</b>.</em></div>
+      <div class="item"><strong>5. zu + Infinitiv</strong><b>zu</b> 放在前缀和词干中间。<br><em>Ich habe vor, den Kunden <b>anzurufen</b>.</em></div>
+      <div class="item"><strong>6. 疑问词 WANN? WOHIN? MIT WEM?</strong>语序照常，关键看动词位置。<br><em>Wann <b>fängt</b> die Besprechung <b>an</b>?</em></div>
+    </div>
+  </section>
+
+  <section id="rules" class="card">
+    <h2>② 规则与形式</h2>
+    <div class="grid2">
+      <div>
+        <h3>A. 什么是可分动词？</h3>
+        <p>可分动词由 <strong>前缀 + 动词词干</strong> 组成。常见前缀有：<strong>an-, auf-, ein-, mit-, nach-, vor-, zu-, aus-, ab-</strong> 等。</p>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>原形</th><th>意思</th><th>职场例句</th></tr></thead>
+            <tbody>
+              <tr><td>anrufen</td><td>打电话给</td><td>Ich rufe den Kunden später <b>an</b>.</td></tr>
+              <tr><td>vorbereiten</td><td>准备</td><td>Wir bereiten die Präsentation gut <b>vor</b>.</td></tr>
+              <tr><td>teilnehmen</td><td>参加</td><td>Wer nimmt an der Schulung <b>teil</b>?</td></tr>
+              <tr><td>mitbringen</td><td>带来</td><td>Bitte bringen Sie Ihren Laptop <b>mit</b>.</td></tr>
+              <tr><td>abschließen</td><td>完成；签订</td><td>Wir schließen den Vertrag morgen <b>ab</b>.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h3>B. 四种最重要的句型</h3>
+        <div class="box mini">
+          <p><strong>主句：</strong><br>Wir <b>fangen</b> um neun Uhr <b>an</b>.<br><span class="cn">我们九点开始。</span></p>
+          <p><strong>从句：</strong><br>..., weil wir um neun Uhr <b>anfangen</b>.<br><span class="cn">……因为我们九点开始。</span></p>
+          <p><strong>情态动词：</strong><br>Wir <b>müssen</b> um neun Uhr <b>anfangen</b>.<br><span class="cn">我们必须九点开始。</span></p>
+          <p><strong>Perfekt：</strong><br>Wir <b>haben</b> um neun Uhr <b>angefangen</b>.<br><span class="cn">我们九点开始了。</span></p>
+          <p><strong>zu-Infinitiv：</strong><br>Es ist wichtig, pünktlich <b>anzufangen</b>.<br><span class="cn">准时开始很重要。</span></p>
+        </div>
+      </div>
+    </div>
+
+    <h3>C. 小表：语序对比</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>类型</th><th>形式</th><th>公式</th></tr></thead>
+        <tbody>
+          <tr><td>主句</td><td>Ich <b>rufe</b> Sie morgen <b>an</b>.</td><td>主语 + 变位动词 + 其他 + 前缀</td></tr>
+          <tr><td>weil 从句</td><td>..., weil ich Sie morgen <b>anrufe</b>.</td><td>weil + 主语 + 其他 + 完整动词</td></tr>
+          <tr><td>情态动词</td><td>Ich <b>muss</b> Sie morgen <b>anrufen</b>.</td><td>主语 + 情态动词 + 其他 + 原形</td></tr>
+          <tr><td>Perfekt</td><td>Ich <b>habe</b> Sie gestern <b>angerufen</b>.</td><td>主语 + haben/sein + 其他 + Partizip II</td></tr>
+          <tr><td>zu-Infinitiv</td><td>Ich versuche, Sie morgen <b>anzurufen</b>.</td><td>... + 前缀 + zu + 词干</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="verbs" class="card">
+    <h2>③ 高频职场可分动词</h2>
+    <p class="cn">优先学你最常会说的句子，而不是只背动词表。</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>动词</th><th>中文</th><th>搭配</th><th>例句</th></tr></thead>
+        <tbody>
+          <tr><td>anrufen</td><td>打电话给</td><td>jemanden anrufen</td><td>Ich rufe den Lieferanten nach dem Meeting <b>an</b>.</td></tr>
+          <tr><td>vorbereiten</td><td>准备</td><td>etwas vorbereiten</td><td>Sie bereitet die Unterlagen für die Schulung <b>vor</b>.</td></tr>
+          <tr><td>teilnehmen</td><td>参加</td><td>an + Dativ teilnehmen</td><td>Wer nimmt morgen an der Besprechung <b>teil</b>?</td></tr>
+          <tr><td>mitbringen</td><td>带来</td><td>etwas mitbringen</td><td>Bitte bringen Sie Ihren Ausweis <b>mit</b>.</td></tr>
+          <tr><td>einladen</td><td>邀请</td><td>jemanden einladen</td><td>Wir laden die Kundin zum Workshop <b>ein</b>.</td></tr>
+          <tr><td>abholen</td><td>接（人）</td><td>jemanden abholen</td><td>Ich hole den Gast am Bahnhof <b>ab</b>.</td></tr>
+          <tr><td>aufmachen</td><td>打开</td><td>etwas aufmachen</td><td>Können Sie bitte die Datei <b>aufmachen</b>?</td></tr>
+          <tr><td>zumachen</td><td>关上</td><td>etwas zumachen</td><td>Machen Sie bitte das Fenster <b>zu</b>.</td></tr>
+          <tr><td>ausfüllen</td><td>填写</td><td>ein Formular ausfüllen</td><td>Bitte füllen Sie das Formular vollständig <b>aus</b>.</td></tr>
+          <tr><td>abschließen</td><td>签完；完成</td><td>einen Vertrag / ein Projekt abschließen</td><td>Wir möchten das Projekt bis Freitag <b>abschließen</b>.</td></tr>
+          <tr><td>nachfragen</td><td>追问；再次确认</td><td>bei jemandem nachfragen</td><td>Ich frage beim Kunden noch einmal <b>nach</b>.</td></tr>
+          <tr><td>zurückrufen</td><td>回电</td><td>jemanden zurückrufen</td><td>Ich rufe Sie heute Nachmittag <b>zurück</b>.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>D. 词形变化例子：anrufen</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>形式</th><th>例句</th></tr></thead>
+        <tbody>
+          <tr><td>Präsens</td><td>Ich <b>rufe</b> den Kunden <b>an</b>.</td></tr>
+          <tr><td>Präteritum</td><td>Ich <b>rief</b> den Kunden <b>an</b>.</td></tr>
+          <tr><td>Perfekt</td><td>Ich <b>habe</b> den Kunden <b>angerufen</b>.</td></tr>
+          <tr><td>mit Modalverb</td><td>Ich <b>muss</b> den Kunden <b>anrufen</b>.</td></tr>
+          <tr><td>im Nebensatz</td><td>..., weil ich den Kunden <b>anrufe</b>.</td></tr>
+          <tr><td>zu + Infinitiv</td><td>Ich versuche, den Kunden <b>anzurufen</b>.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="errors" class="card">
+    <h2>④ 常见错误提醒</h2>
+    <div class="grid3">
+      <div class="box">
+        <h3>错误 1：主句里不分开</h3>
+        <p class="bad"><span class="warn">✗</span> Ich anrufe den Kunden.</p>
+        <p class="good"><span>✓</span> Ich <b>rufe</b> den Kunden <b>an</b>.</p>
+      </div>
+      <div class="box">
+        <h3>错误 2：从句里还分开</h3>
+        <p class="bad"><span class="warn">✗</span> ..., weil ich rufe den Kunden an.</p>
+        <p class="good"><span>✓</span> ..., weil ich den Kunden <b>anrufe</b>.</p>
+      </div>
+      <div class="box">
+        <h3>错误 3：zu 的位置不对</h3>
+        <p class="bad"><span class="warn">✗</span> Ich versuche, zu anrufen.</p>
+        <p class="good"><span>✓</span> Ich versuche, <b>anzurufen</b>.</p>
+      </div>
+    </div>
+    <div class="box" style="margin-top:14px">
+      <strong>特别提醒：</strong>
+      <ul class="list">
+        <li><strong>teilnehmen</strong> 要和 <strong>an + Dativ</strong> 连用：<em>an der Besprechung teilnehmen</em></li>
+        <li><strong>einladen</strong> 的 Perfekt 是 <em>eingeladen</em>，不是 *geeinladen*</li>
+        <li><strong>mitbringen</strong> 的 Perfekt 是 <em>mitgebracht</em>，因为词干是 <em>bringen</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="practice" class="card">
+    <h2>⑤ 互动练习</h2>
+    <p class="cn">说明：做完一组就可以点“检查答案”。你也可以多次刷新重复练习。</p>
+
+    <h3>A. 选择题（语序）</h3>
+    <div id="mcq"></div>
+
+    <h3>B. 填空题</h3>
+    <div id="fill"></div>
+
+    <h3>C. 改写题</h3>
+    <div id="rewrite"></div>
+
+    <h3>D. 排序题</h3>
+    <div id="order"></div>
+
+    <h3>E. 配对题：左边句首 + 右边句尾</h3>
+    <div class="exercise">
+      <div class="qhead"><div><span class="qtitle">Was passt zusammen?</span><div class="muted mini">点击左边，再点击右边配对。</div></div><div class="score" id="pairScore">0 / 6</div></div>
+      <div class="pair-grid">
+        <div class="pair-col" id="leftCol"></div>
+        <div class="pair-col" id="rightCol"></div>
+      </div>
+      <div class="btnrow">
+        <button class="secondary" onclick="resetPairs()">重新开始配对</button>
+      </div>
+      <div id="pairMsg" class="result"></div>
+    </div>
+  </section>
+
+  <section id="speaking" class="card">
+    <h2>⑥ 口语输出 · 职场德语</h2>
+    <p class="cn">每题建议先口头说 2–3 句，再写下来。尽量用上可分动词。</p>
+    <div id="speakingWrap"></div>
+  </section>
+
+  <footer class="footer">B1 职场德语 · 可分动词专题 · 可反复练习</footer>
+</div>
+
+<script>
+const MCQ = [
+  {q:'请选择正确句子：', options:['Ich anrufe morgen den Kunden.','Ich rufe morgen den Kunden an.','Ich rufe an morgen den Kunden.'], a:1, why:'主句里可分前缀放句尾：Ich rufe ... an.'},
+  {q:'请选择正确的 weil 从句：', options:['..., weil ich den Kunden anrufe.','..., weil ich rufe den Kunden an.','..., weil anrufe ich den Kunden.'], a:0, why:'从句里动词不分开，整个动词放句末。'},
+  {q:'哪个句子是正确的 Perfekt？', options:['Ich habe den Termin abgesagt.','Ich habe den Termin gesagt ab.','Ich bin den Termin abgesagt.'], a:0, why:'ab|sagen 的 Partizip II 是 abgesagt。'},
+  {q:'请选择正确句子：', options:['Wir nehmen an der Schulung teil.','Wir teilnehmen an der Schulung.','Wir nehmen teil der Schulung.'], a:0, why:'最自然的主句语序是：Wir nehmen an der Schulung teil.'},
+  {q:'带情态动词时，哪个正确？', options:['Ich muss den Kunden zurückrufe.','Ich muss den Kunden zurückrufen.','Ich muss zurück den Kunden rufen.'], a:1, why:'情态动词后用原形，前缀不分开。'},
+  {q:'zu + Infinitiv 形式哪个正确？', options:['anzurufen','zu anrufen','anrufen zu'], a:0, why:'可分动词中，zu 放在前缀和词干之间：an + zu + rufen。'}
+];
+
+const FILL = [
+  {stem:'Bitte ______ Sie das Formular vollständig _____. (ausfüllen)', a1:'füllen', a2:'aus', why:'主句：Sie füllen ... aus.'},
+  {stem:'..., weil ich den Lieferanten später ________. (anrufen)', a1:'anrufe', a2:'', why:'从句里不分开：anrufe。'},
+  {stem:'Wir haben die Präsentation gut __________. (vorbereiten)', a1:'vorbereitet', a2:'', why:'Perfekt：vorbereitet。'},
+  {stem:'Können Sie bitte Ihren Ausweis __________? (mitbringen)', a1:'mitbringen', a2:'', why:'情态动词 / können 后用原形。'},
+  {stem:'Ich versuche, die Kundin heute noch __________. (zurückrufen)', a1:'zurückzurufen', a2:'', why:'zu + Infinitiv：zurückzurufen。'},
+  {stem:'Wer nimmt morgen an der Besprechung _____?', a1:'teil', a2:'', why:'teilnehmen 的主句形式：nimmt ... teil。'}
+];
+
+const REWRITE = [
+  {prompt:'把句子改成 weil 从句： Ich rufe den Chef später an.', key:['weil ich den chef später anrufe','..., weil ich den chef später anrufe'], why:'weil 从句里 anrufen 不分开。'},
+  {prompt:'把句子改成 Perfekt： Wir sagen das Meeting ab.', key:['wir haben das meeting abgesagt'], why:'absagen → abgesagt。'},
+  {prompt:'把句子改成 mit Modalverb： Ich hole den Gast ab. (müssen)', key:['ich muss den gast abholen'], why:'情态动词后用原形 abholen。'},
+  {prompt:'把句子改成 zu-Infinitiv： Ich plane, den Bericht heute zu Ende zu bringen. → 用 vorbereiten 造句', key:['ich plane, den bericht heute vorzubereiten','ich plane den bericht heute vorzubereiten'], why:'可分动词的 zu-Infinitiv：vorzubereiten。'}
+];
+
+const ORDER = [
+  {parts:['morgen','rufen','wir','den Kunden','an'], ans:'Wir rufen den Kunden morgen an.', why:'主句：变位动词第二位，前缀句尾。'},
+  {parts:['ich','weil','an der Schulung','teilnehme'], ans:'weil ich an der Schulung teilnehme', why:'从句：完整动词句末。'},
+  {parts:['den Laptop','mitbringen','Sie','bitte','Können'], ans:'Können Sie bitte den Laptop mitbringen?', why:'情态动词后用原形。'},
+  {parts:['hat','abgesagt','den Termin','er'], ans:'Er hat den Termin abgesagt.', why:'Perfekt：hat + Partizip II。'}
+];
+
+const PAIRS = [
+  ['Ich rufe Sie später','zurück.'],
+  ['Wir füllen das Formular','online aus.'],
+  ['Bitte bringen Sie Ihren Laptop','morgen mit.'],
+  ['Wer nimmt an der Schulung','teil?'],
+  ['Ich hole den Gast','am Bahnhof ab.'],
+  ['Wir schließen den Vertrag','diese Woche ab.']
+];
+
+const SPEAK = [
+  '你要给客户回电。请用 zurückrufen 说 2 句。',
+  '你要邀请同事参加培训。请用 einladen 和 teilnehmen 说 2–3 句。',
+  '你要准备一个报告。请用 vorbereiten 说 2 句。',
+  '你要解释自己为什么不能参加会议。请至少用一个 weil 从句，并用 teilnehmen。',
+  '请比较这两句：Ich rufe ihn an. / ..., weil ich ihn anrufe. 自己再造 2 个类似句子。',
+  '请用 mitbringen、abholen、abschließen 各造一个与工作有关的句子。'
+];
+
+function el(tag, cls, html){ const x=document.createElement(tag); if(cls) x.className=cls; if(html!==undefined) x.innerHTML=html; return x; }
+function norm(s){ return (s||'').toLowerCase().replace(/[，。！？,.!?]/g,'').replace(/\s+/g,' ').trim(); }
+
+function renderMCQ(){
+  const wrap=document.getElementById('mcq');
+  MCQ.forEach((q,idx)=>{
+    const box=el('div','exercise');
+    box.innerHTML=`<div class="qhead"><div><span class="qnum">${idx+1}</span> <span class="qtitle">${q.q}</span></div></div>`;
+    const opt=el('div','options');
+    q.options.forEach((t,i)=>{
+      const id=`mcq_${idx}_${i}`;
+      opt.innerHTML += `<label class="opt"><input type="radio" name="mcq_${idx}" id="${id}" value="${i}"><span>${t}</span></label>`;
+    });
+    box.appendChild(opt);
+    box.innerHTML += `<div class="btnrow"><button onclick="checkMCQ(${idx}, this)">检查答案</button></div><div id="mcqres_${idx}" class="result"></div>`;
+    wrap.appendChild(box);
+  });
+}
+function checkMCQ(idx, btn){
+  const chosen=document.querySelector(`input[name="mcq_${idx}"]:checked`);
+  const res=document.getElementById(`mcqres_${idx}`);
+  if(!chosen){res.className='result show badbg';res.textContent='请先选择一个答案。';return;}
+  const q=MCQ[idx];
+  const ok=Number(chosen.value)===q.a;
+  res.className='result show '+(ok?'okbg':'badbg');
+  res.innerHTML=(ok?'回答正确。':'再想想。')+` 解释：${q.why}`;
+}
+
+function renderFill(){
+  const wrap=document.getElementById('fill');
+  FILL.forEach((q,idx)=>{
+    const box=el('div','exercise');
+    box.innerHTML=`<div class="qhead"><div><span class="qnum">${idx+1}</span> <span class="qtitle">${q.stem}</span></div></div>`+
+      `<div class="grid2"><input id="f1_${idx}" type="text" placeholder="答案 1"> <input id="f2_${idx}" type="text" placeholder="答案 2（如果没有可空着）"></div>`+
+      `<div class="btnrow"><button onclick="checkFill(${idx})">检查答案</button></div><div id="fillres_${idx}" class="result"></div>`;
+    wrap.appendChild(box);
+  });
+}
+function checkFill(idx){
+  const q=FILL[idx], a1=norm(document.getElementById(`f1_${idx}`).value), a2=norm(document.getElementById(`f2_${idx}`).value); const res=document.getElementById(`fillres_${idx}`);
+  const ok = a1===norm(q.a1) && a2===norm(q.a2);
+  res.className='result show '+(ok?'okbg':'badbg');
+  res.innerHTML=(ok?'回答正确。':'不完全正确。')+` 正确答案：<b>${q.a1}</b>${q.a2? ' / <b>'+q.a2+'</b>':''}。解释：${q.why}`;
+}
+
+function renderRewrite(){
+  const wrap=document.getElementById('rewrite');
+  REWRITE.forEach((q,idx)=>{
+    const box=el('div','exercise');
+    box.innerHTML=`<div class="qhead"><div><span class="qnum">${idx+1}</span> <span class="qtitle">${q.prompt}</span></div></div>`+
+      `<textarea id="rw_${idx}" placeholder="写出你的答案"></textarea>`+
+      `<div class="btnrow"><button onclick="checkRewrite(${idx})">检查答案</button></div><div id="rwres_${idx}" class="result"></div>`;
+    wrap.appendChild(box);
+  });
+}
+function checkRewrite(idx){
+  const q=REWRITE[idx], val=norm(document.getElementById(`rw_${idx}`).value), res=document.getElementById(`rwres_${idx}`); const ok=q.key.some(k=>val===norm(k));
+  res.className='result show '+(ok?'okbg':'badbg');
+  res.innerHTML=(ok?'回答正确。':'可再修改。')+` 参考答案：<b>${q.key[0]}</b>。解释：${q.why}`;
+}
+
+function renderOrder(){
+  const wrap=document.getElementById('order');
+  ORDER.forEach((q,idx)=>{
+    const box=el('div','exercise');
+    const shuffled=[...q.parts].sort(()=>Math.random()-.5).map(p=>`<span class="kbd">${p}</span>`).join(' ');
+    box.innerHTML=`<div class="qhead"><div><span class="qnum">${idx+1}</span> <span class="qtitle">请把这些词排成正确句子：</span></div></div>`+
+      `<div class="box mini">${shuffled}</div>`+
+      `<input id="ord_${idx}" type="text" placeholder="写出完整句子">`+
+      `<div class="btnrow"><button onclick="checkOrder(${idx})">检查答案</button></div><div id="ordres_${idx}" class="result"></div>`;
+    wrap.appendChild(box);
+  });
+}
+function checkOrder(idx){
+  const q=ORDER[idx], val=norm(document.getElementById(`ord_${idx}`).value), res=document.getElementById(`ordres_${idx}`); const ok=val===norm(q.ans);
+  res.className='result show '+(ok?'okbg':'badbg');
+  res.innerHTML=(ok?'回答正确。':'再检查一下语序。')+` 参考答案：<b>${q.ans}</b>。解释：${q.why}`;
+}
+
+let pairState={left:null,right:null,matches:0,done:new Set()};
+function renderPairs(){
+  const left=document.getElementById('leftCol'), right=document.getElementById('rightCol');
+  left.innerHTML=''; right.innerHTML=''; pairState={left:null,right:null,matches:0,done:new Set()};
+  const leftItems=PAIRS.map((p,i)=>({id:i,text:p[0]}));
+  const rightItems=PAIRS.map((p,i)=>({id:i,text:p[1]})).sort(()=>Math.random()-.5);
+  leftItems.forEach(item=>left.appendChild(token(item,'L'))); rightItems.forEach(item=>right.appendChild(token(item,'R')));
+  document.getElementById('pairScore').textContent=`0 / ${PAIRS.length}`; document.getElementById('pairMsg').className='result';
+}
+function token(item,side){
+  const d=el('div','token',item.text); d.dataset.id=item.id; d.dataset.side=side; d.onclick=()=>selectToken(d); return d;
+}
+function selectToken(node){
+  if(node.classList.contains('done')) return;
+  const side=node.dataset.side;
+  [...document.querySelectorAll(`.token[data-side="${side}"]`)].forEach(x=>x.classList.remove('selected'));
+  node.classList.add('selected');
+  if(side==='L') pairState.left=node; else pairState.right=node;
+  if(pairState.left && pairState.right){
+    const ok=pairState.left.dataset.id===pairState.right.dataset.id;
+    const msg=document.getElementById('pairMsg');
+    if(ok){
+      pairState.left.classList.remove('selected'); pairState.right.classList.remove('selected');
+      pairState.left.classList.add('done'); pairState.right.classList.add('done');
+      pairState.matches++; document.getElementById('pairScore').textContent=`${pairState.matches} / ${PAIRS.length}`;
+      msg.className='result show okbg'; msg.textContent='配对正确。';
+      if(pairState.matches===PAIRS.length){msg.textContent='全部配对完成，做得很好！';}
+    }else{ msg.className='result show badbg'; msg.textContent='这两个不匹配，再试一次。'; }
+    pairState.left=null; pairState.right=null;
+  }
+}
+function resetPairs(){renderPairs()}
+
+function renderSpeaking(){
+  const wrap=document.getElementById('speakingWrap');
+  SPEAK.forEach((t,i)=>{
+    const box=el('div','exercise');
+    box.innerHTML=`<div class="qhead"><div><span class="qnum">${i+1}</span> <span class="qtitle">${t}</span></div></div><textarea placeholder="先自己说，再把你的句子写下来"></textarea>`;
+    wrap.appendChild(box);
+  });
+}
+
+renderMCQ(); renderFill(); renderRewrite(); renderOrder(); renderPairs(); renderSpeaking();
+</script>
+</body>
+</html>
